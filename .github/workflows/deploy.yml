@@ -10,7 +10,7 @@ jobs:
     strategy:
       matrix:
         image:
-          - name: python3.10.3-alpine3.15
+          - name: python3.10-alpine3.15
             python_version: "3.10"
       fail-fast: true
     runs-on: ubuntu-20.04
