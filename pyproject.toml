@@ -1,8 +1,9 @@
 [tool.poetry]
 name = "uvicorn-gunicorn-docker"
 version = "0.1.0"
-description = "Docker image with Uvicorn managed by Gunicorn for high-performance web applications in Python 3.7 and 3.6 with performance auto-tuning. Optionally with Alpine Linux."
+description = "Docker image with Uvicorn managed by Gunicorn for high-performance web applications in Python 3.10 with performance auto-tuning. Optionally with Alpine Linux."
 license = "MIT"
+authors = []
 
 [tool.poetry.dependencies]
 python = "^3.10"
