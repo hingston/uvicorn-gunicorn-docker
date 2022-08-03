@@ -4,7 +4,7 @@ import sys
 
 environments = [
     {"NAME": "python3.10-alpine3.15", "PYTHON_VERSION": "3.10"},
-    {"NAME": "python3.11.0b3-alpine3.15", "PYTHON_VERSION": "3.11.0b3"},
+    {"NAME": "python3.11.0b5-alpine3.16", "PYTHON_VERSION": "3.11.0b5"},
 ]
 
 start_with = os.environ.get("START_WITH")

@@ -1,4 +1,4 @@
-FROM python:3.11.0b3-alpine3.15 as base
+FROM python:3.11.0b5-alpine3.16 as base
 
 FROM base as builder
 COPY requirements.txt /tmp/requirements.txt
