@@ -1,4 +1,4 @@
-FROM python:3.10-alpine3.15 as base
+FROM python:3.10-alpine as base
 
 FROM base as builder
 COPY requirements.txt /tmp/requirements.txt
@@ -7,6 +7,7 @@ RUN apk add --no-cache --virtual .build-deps gcc libc-dev make \
     && apk del .build-deps gcc libc-dev make
 
 FROM base as final
+RUN apk update && apk upgrade
 COPY --from=builder /usr/src/app/wheels /wheels
 RUN pip install --no-cache /wheels/*
 COPY ./start.sh /start.sh
