@@ -23,7 +23,7 @@ jobs:
         with:
           python-version: "3.12"
       - name: Install Dependencies
-        run: python3.10 -m pip install docker pytest
+        run: python3.12 -m pip install docker pytest
       - name: Test Image
         run: bash scripts/test.sh
         env:
