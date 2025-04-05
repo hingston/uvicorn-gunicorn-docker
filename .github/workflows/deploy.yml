@@ -16,6 +16,8 @@ jobs:
             python_version: "3.11.4"
           - name: python3.12.2-alpine3.19
             python_version: "3.12.2"
+          - name: python3.13.2-alpine3.21
+            python_version: "3.13.2"
       fail-fast: true
     runs-on: ubuntu-20.04
     steps:
@@ -23,7 +25,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.12"
+          python-version: "3.13"
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
       - name: Set up Docker Buildx
