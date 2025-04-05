@@ -8,12 +8,6 @@ jobs:
     strategy:
       matrix:
         image:
-          - name: python3.10-alpine3.15
-            python_version: "3.10"
-          - name: python3.11.4-alpine3.18
-            python_version: "3.11.4"
-          - name: python3.12.2-alpine3.19
-            python_version: "3.12.2"
           - name: python3.13.2-alpine3.21
             python_version: "3.13.2"
       fail-fast: true
