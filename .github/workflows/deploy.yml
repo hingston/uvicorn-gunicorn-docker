@@ -13,7 +13,7 @@ jobs:
           - name: python3.13.2-alpine3.21
             python_version: "3.13.2"
       fail-fast: true
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - name: Set up Python
