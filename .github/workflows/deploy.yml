@@ -24,7 +24,7 @@ jobs:
         uses: docker/setup-qemu-action@v4
       - name: Set up Docker Buildx
         id: buildx
-        uses: docker/setup-buildx-action@v3
+        uses: docker/setup-buildx-action@v4
       - name: Install Dependencies
         run: python3.13 -m pip install docker pytest
       - name: Deploy Image
