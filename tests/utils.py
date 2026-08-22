@@ -45,13 +45,19 @@ def get_logs(container: DockerClient) -> str:
     return logs.decode("utf-8")
 
 
+def get_app_python_version() -> str:
+    # The test apps report only major.minor, e.g. "3.13" for a 3.13.2 image.
+    python_version = os.getenv("PYTHON_VERSION", "")
+    return ".".join(python_version.split(".")[:2])
+
+
 def get_response_text1() -> str:
-    python_version = os.getenv("PYTHON_VERSION")
+    python_version = get_app_python_version()
     return f"Hello world! From Uvicorn with Gunicorn. Using Python {python_version}"
 
 
 def get_response_text2() -> str:
-    python_version = os.getenv("PYTHON_VERSION")
+    python_version = get_app_python_version()
     return f"Test app. From Uvicorn with Gunicorn. Using Python {python_version}"
 
 
