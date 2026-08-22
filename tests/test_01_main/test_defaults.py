@@ -20,7 +20,7 @@ def verify_container(container: Container, response_text: str) -> None:
     response = requests.get("http://127.0.0.1:8000")
     assert response.text == response_text
     config_data = get_config(container)
-    assert config_data["workers_per_core"] == 1
+    assert config_data["workers_per_core"] == 3
     assert config_data["use_max_workers"] is None
     assert config_data["host"] == "0.0.0.0"
     assert config_data["port"] == "80"
